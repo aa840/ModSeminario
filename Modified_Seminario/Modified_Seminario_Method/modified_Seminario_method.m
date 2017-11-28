@@ -2,9 +2,9 @@ function modified_Seminario_method( inputfilefolder,  outputfilefolder, vibratio
 
 %   Program to implement the Modified Seminario Method
 %   Written by Alice E. A. Allen, TCM, University of Cambridge
-%   Reference using ... 
+%   Reference using AEA Allen, MC Payne, DJ Cole, J. Chem. Theory Comput. (2017) in press, doi:10.1021/acs.jctc.7b00785
 
-% Pass as arguements the input folder containing the zmat.log/lig.log,
+% Pass as arguments the input folder containing the zmat.log/lig.log,
 % lig.fchk and optional Zmat.z file, the output folder where the new
 % parameters will be written and the vibrational frequency scaling constant
 % required. 
