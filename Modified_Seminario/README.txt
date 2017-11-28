@@ -20,3 +20,7 @@ Average_Modified_Seminario_Angles - Average angle force constants and equilibriu
 Modified_Scaled_Seminario.sb - The new terms are placed into a .sb file 
 
 A tutorial named `Tutorial_Modified_Seminario_Method.pdf' is included for more information. 
+
+If you use the modified Seminario method in your work, please cite:
+"AEA Allen, MC Payne, DJ Cole, J. Chem. Theory Comput. (2017) in press, doi:10.1021/acs.jctc.7b00785"
+
