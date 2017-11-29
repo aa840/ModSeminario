@@ -5,7 +5,7 @@ function [hessian,N] =  coords_from_fchk( inputfilefolder, fchk_file )
 if exist( horzcat(inputfilefolder,fchk_file), 'file') == 2
     fid = fopen(horzcat(inputfilefolder,fchk_file));
 else
-    fid_log = fopen(horzcat(outputfilefolder,'MSM_log'));
+    fid_log = fopen(horzcat(inputfilefolder,'MSM_log'));
     fprintf(fid_log, '%s\n', 'ERROR - No .fchk file found.');
     fclose(fid_log);
 end
