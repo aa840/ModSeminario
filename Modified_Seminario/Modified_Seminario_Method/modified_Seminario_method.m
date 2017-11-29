@@ -10,7 +10,7 @@ function modified_Seminario_method( inputfilefolder,  outputfilefolder, vibratio
 % required. 
 
 %Create log file
-fid_log = fopen(horzcat(outputfilefolder,'MSM_log'), 'wt');
+fid_log = fopen(horzcat(inputfilefolder,'MSM_log'), 'wt');
 fprintf(fid_log, '%s\n', 'Modified Seminario Method ');
 fprintf(fid_log, '%s %s\n', 'Parametrization started for files in folder', inputfilefolder);
 fprintf(fid_log, '%s %s\n', 'Time is now: ', datestr(clock, 0));
