@@ -13,7 +13,7 @@ else
     if exist( 'lig.log', 'file') == 2
         fid = fopen('lig.log'); 
     else
-        fid_log = fopen(horzcat(outputfilefolder,'MSM_log'));
+        fid_log = fopen(horzcat(inputfilefolder,'MSM_log'), 'a');
         fprintf(fid_log, '%s\n', 'ERROR - No .log file found.');
         fclose(fid_log);
     end
