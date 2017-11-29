@@ -22,7 +22,7 @@ while ischar(tline) && loop == 'y'
     %Gets atomic numbers
     if size(tline,2) > 14 && strcmp(strtrim(tline(1:14)), 'Atomic numbers')
         tline = fgets(fid);
-        while size(tline,2) < 15 || strcmp(strtrim(tline(1:15)), 'Nuclear charges')  == 0
+        while sum(isstrprop(strtrim(tline(1:5)), 'alpha' ))  == 0
             tmp = strsplit(strtrim(tline));
             numbers(end + 1:(end + size(tmp,2))) = str2num(char(tmp));
             tline = fgets(fid);
@@ -32,7 +32,7 @@ while ischar(tline) && loop == 'y'
     %Gets coordinates
     if size(tline,2) > 29 && strcmp(strtrim(tline(1:29)), 'Current cartesian coordinates')
         tline = fgets(fid);
-        while size(tline,2) < 11 || strcmp(strtrim(tline(1:11)), 'Force Field')  == 0 && strcmp(strtrim(tline(1:14)), 'Int Atom Types')  == 0 && strcmp(strtrim(tline(1:10)), 'Atom Types')  == 0
+        while sum(isstrprop(strtrim(tline(1:5)), 'alpha' ))  == 0
             tmp = strsplit(strtrim(tline));
             list_coords(end + 1:(end + size(tmp,2))) = str2num(char(tmp)); 
             tline = fgets(fid);
@@ -42,7 +42,7 @@ while ischar(tline) && loop == 'y'
     %Gets Hessian
     if size(tline,2) > 25 && strcmp(strtrim(tline(1:25)), 'Cartesian Force Constants')
         tline = fgets(fid);
-        while size(tline,2) < 13 || strcmp(strtrim(tline(1:13)), 'Dipole Moment')  == 0
+        while sum(isstrprop(strtrim(tline(1:5)), 'alpha' ))  == 0
             tmp = strsplit(strtrim(tline));
             hessian(end + 1:(end + size(tmp,2))) = str2num(char(tmp)); 
             tline = fgets(fid);
